@@ -1,0 +1,178 @@
+doctype html
+html(lang='zh-cmn-Hans')
+  head
+    meta(charset='UTF-8')
+    link(rel='shortcut icon', href='favicon.ico')
+    link(rel='stylesheet', href='css/iconfont.css')
+    link(rel='stylesheet', href='css/global.css')
+    link(rel='stylesheet', href='css/bootstrap.min.css')
+    link(rel='stylesheet', href='css/bootstrap-theme.min.css')
+    link(rel='stylesheet', href='css/swiper.min.css')
+    link(rel='stylesheet', href='css/styles.css')
+    script(src='js/jquery.1.12.4.min.js', charset='UTF-8')
+    script(src='js/bootstrap.min.js', charset='UTF-8')
+    script(src='js/swiper.min.js', charset='UTF-8')
+    script(src='js/global.js', charset='UTF-8')
+    script(src='js/jquery.DJMask.2.1.1.js', charset='UTF-8')
+    title U袋网
+  body
+    // 顶部tab
+    .tab-header
+      .inner
+        .pull-left
+          .pull-left
+            | 嗨，欢迎来到
+            span.cr U袋网
+          a(href='agent_level.html') 网店代销
+          a(href='temp_article/udai_article4.html') 帮助中心
+        .pull-right
+          a(href='login.html')
+            span.cr 登录
+          a(href='login.html?p=register') 注册
+          a(href='udai_welcome.html') 我的U袋
+          a(href='udai_order.html') 我的订单
+          a(href='udai_integral.html') 积分平台
+    // 搜索栏
+    .top-search
+      .inner
+        a.logo(href='index.html')
+          img.cover(src='images/icons/logo.jpg', alt='U袋网')
+        .search-box
+          form.input-group
+            input(placeholder='Ta们都在搜U袋网', type='text')
+            span.input-group-btn
+              button(type='button')
+                span.glyphicon.glyphicon-search(aria-hidden='true')
+          p.help-block.text-nowrap
+            a(href='') 连衣裙
+            a(href='') 裤
+            a(href='') 衬衫
+            a(href='') T恤
+            a(href='') 女包
+            a(href='') 家居服
+            a(href='') 2017新款
+        .cart-box
+          a.cart-but(href='udai_shopcart.html')
+            i.iconfont.icon-shopcart.cr.fz16
+            |  购物车 0 件
+    // 内页导航栏
+    .top-nav.bg3
+      .nav-box.inner
+        .all-cat
+          .title
+            i.iconfont.icon-menu
+            |  全部分类
+        ul.nva-list
+          a(href='index.html')
+            li 首页
+          a(href='')
+            li 企业简介
+          a(href='')
+            li 新手上路
+          a(href='class_room.html')
+            li U袋学堂
+          a(href='enterprise_id.html')
+            li 企业账号
+          a(href='udai_contract.html')
+            li 诚信合约
+          a(href='item_remove.html')
+            li 实时下架
+    .content.inner
+      section.panel__div.clearfix
+        .filter-value
+          .filter-title 联系我们
+        .html-code
+          p 这里是联系我们的方式，地图，喵喵喵
+          img(src='images/temp/map.jpg', alt='map')
+    // 右侧菜单
+    .right-nav
+      ul.r-with-gotop
+        li.r-toolbar-item
+          a.r-item-hd(href='udai_welcome.html')
+            i.iconfont.icon-user(data-badge='0')
+            .r-tip__box
+              span.r-tip-text 用户中心
+        li.r-toolbar-item
+          a.r-item-hd(href='udai_shopcart.html')
+            i.iconfont.icon-cart
+            .r-tip__box
+              span.r-tip-text 购物车
+        li.r-toolbar-item
+          a.r-item-hd(href='udai_collection.html')
+            i.iconfont.icon-aixin
+            .r-tip__box
+              span.r-tip-text 我的收藏
+        li.r-toolbar-item
+          a.r-item-hd(href='')
+            i.iconfont.icon-liaotian
+            .r-tip__box
+              span.r-tip-text 联系客服
+        li.r-toolbar-item
+          a.r-item-hd(href='issues.html')
+            i.iconfont.icon-liuyan
+            .r-tip__box
+              span.r-tip-text 留言反馈
+        li.r-toolbar-item.to-top
+          i.iconfont.icon-top
+          .r-tip__box
+            span.r-tip-text 返回顶部
+      script.
+        $(document).ready(function(){ $('.to-top').toTop({position:false}) });
+    // 底部信息
+    .footer
+      .footer-tags
+        .tags-box.inner
+          .tag-div
+            img(src='images/icons/footer_1.gif', alt='厂家直供')
+          .tag-div
+            img(src='images/icons/footer_2.gif', alt='一件代发')
+          .tag-div
+            img(src='images/icons/footer_3.gif', alt='美工活动支持')
+          .tag-div
+            img(src='images/icons/footer_4.gif', alt='信誉认证')
+      .footer-links.inner
+        dl
+          dt U袋网
+          a(href='')
+            dd 企业简介
+          a(href='')
+            dd 加入U袋
+          a(href='')
+            dd 隐私说明
+        dl
+          dt 服务中心
+          a(href='')
+            dd 售后服务
+          a(href='')
+            dd 配送服务
+          a(href='')
+            dd 用户协议
+          a(href='')
+            dd 常见问题
+        dl
+          dt 新手上路
+          a(href='')
+            dd 如何成为代理商
+          a(href='')
+            dd 代销商上架教程
+          a(href='')
+            dd 分销商常见问题
+          a(href='')
+            dd 付款账户
+      .copy-box.clearfix
+        ul.copy-links
+          a(href='')
+            li 网店代销
+          a(href='class_room.html')
+            li U袋学堂
+          a(href='')
+            li 联系我们
+          a(href='')
+            li 企业简介
+          a(href='')
+            li 新手上路
+        // 版权
+        p.copyright
+          | © 2005-2017 U袋网 版权所有，并保留所有权利
+          br
+          |         ICP备案证书号：闽ICP备16015525号-2    福建省宁德市福鼎市南下村小区（锦昌阁）1栋1梯602室    Tel: 18650406668    E-mail: 18650406668@qq.com

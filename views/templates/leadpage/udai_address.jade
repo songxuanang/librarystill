@@ -1,0 +1,339 @@
+doctype html
+html(lang='zh-cmn-Hans')
+  head
+    meta(charset='UTF-8')
+    link(rel='shortcut icon', href='favicon.ico')
+    link(rel='stylesheet', href='css/iconfont.css')
+    link(rel='stylesheet', href='css/global.css')
+    link(rel='stylesheet', href='css/bootstrap.min.css')
+    link(rel='stylesheet', href='css/bootstrap-theme.min.css')
+    link(rel='stylesheet', href='css/swiper.min.css')
+    link(rel='stylesheet', href='css/styles.css')
+    script(src='js/jquery.1.12.4.min.js', charset='UTF-8')
+    script(src='js/bootstrap.min.js', charset='UTF-8')
+    script(src='js/swiper.min.js', charset='UTF-8')
+    script(src='js/global.js', charset='UTF-8')
+    // <script src="js/jquery.DJMask.2.1.1.js" charset="UTF-8"></script>
+    title U袋网
+  body
+    // 顶部tab
+    .tab-header
+      .inner
+        .pull-left
+          .pull-left
+            | 嗨，欢迎来到
+            span.cr U袋网
+          a(href='agent_level.html') 网店代销
+          a(href='temp_article/udai_article4.html') 帮助中心
+        .pull-right
+          a(href='login.html')
+            span.cr 登录
+          a(href='login.html?p=register') 注册
+          a(href='udai_welcome.html') 我的U袋
+          a(href='udai_order.html') 我的订单
+          a(href='udai_integral.html') 积分平台
+    // 顶部标题
+    .bgf5.clearfix
+      .top-user
+        .inner
+          a.logo(href='index.html')
+            img.cover(src='images/icons/logo.jpg', alt='U袋网')
+          .title 个人中心
+    .content.clearfix.bgf5
+      section.user-center.inner.clearfix
+        .pull-left.bgf
+          a.title(href='udai_welcome.html') U袋欢迎页
+          dl.user-center__nav
+            dt 帐户信息
+            a(href='udai_setting.html')
+              dd 个人资料
+            a(href='udai_treasurer.html')
+              dd 资金管理
+            a(href='udai_integral.html')
+              dd 积分平台
+            a(href='udai_address.html')
+              dd.active 收货地址
+            a(href='udai_coupon.html')
+              dd 我的优惠券
+            a(href='udai_paypwd_modify.html')
+              dd 修改支付密码
+            a(href='udai_pwd_modify.html')
+              dd 修改登录密码
+          dl.user-center__nav
+            dt 订单中心
+            a(href='udai_order.html')
+              dd 我的订单
+            a(href='udai_collection.html')
+              dd 我的收藏
+            a(href='udai_refund.html')
+              dd 退款/退货
+          dl.user-center__nav
+            dt 服务中心
+            a(href='udai_mail_query.html')
+              dd 物流查询
+            a(href='')
+              dd 数据自助下载
+            a(href='temp_article/udai_article1.html')
+              dd 售后服务
+            a(href='temp_article/udai_article2.html')
+              dd 配送服务
+            a(href='temp_article/udai_article3.html')
+              dd 用户协议
+            a(href='temp_article/udai_article4.html')
+              dd 常见问题
+          dl.user-center__nav
+            dt 新手上路
+            a(href='temp_article/udai_article5.html')
+              dd 如何成为代理商
+            a(href='temp_article/udai_article6.html')
+              dd 代销商上架教程
+            a(href='temp_article/udai_article7.html')
+              dd 分销商常见问题
+            a(href='temp_article/udai_article8.html')
+              dd 付款账户
+          dl.user-center__nav
+            dt U袋网
+            a(href='temp_article/udai_article10.html')
+              dd 企业简介
+            a(href='temp_article/udai_article11.html')
+              dd 加入U袋
+            a(href='temp_article/udai_article12.html')
+              dd 隐私说明
+        .pull-right
+          .user-content__box.clearfix.bgf
+            .title 账户信息-收货地址
+            form.user-addr__form.form-horizontal(action='', role='form')
+              p.fz18.cr
+                | 新增收货地址
+                span.c6(style='margin-left: 20px') 电话号码、手机号码选填一项，其余均为必填项
+              .form-group
+                label.col-sm-2.control-label(for='name') 收货人姓名：
+                .col-sm-6
+                  input#name.form-control(placeholder='请输入姓名', type='text')
+              .form-group
+                label.col-sm-2.control-label(for='details') 收货地址：
+                .col-sm-10
+                  .addr-linkage
+                    select(name='province')
+                    select(name='city')
+                    select(name='area')
+                    select(name='town')
+                  input#details.form-control(placeholder='建议您如实填写详细收货地址，例如街道名称，门牌号码等信息', maxlength='30', type='text')
+              //
+                <div class="form-group">
+                <label for="code" class="col-sm-2 control-label">地区编码：</label>
+                <div class="col-sm-6">
+                <input class="form-control" id="code" placeholder="请输入邮政编码" type="text">
+                </div>
+                </div>
+              .form-group
+                label.col-sm-2.control-label(for='mobile') 手机号码：
+                .col-sm-6
+                  input#mobile.form-control(placeholder='请输入手机号码', type='text')
+              .form-group
+                label.col-sm-2.control-label(for='phone') 电话号码：
+                .col-sm-6
+                  input#phone.form-control(placeholder='请输入电话号码', type='text')
+              .form-group
+                .col-sm-offset-2.col-sm-6
+                  .checkbox
+                    label
+                      input(type='checkbox')
+                      i
+                      |  设为默认收货地址
+              .form-group
+                .col-sm-offset-2.col-sm-6
+                  button.but(type='submit') 保存
+              script(src='js/jquery.citys.js')
+              script(src='http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js')
+              script.
+                $(document).ready(function(){
+                // 添加街道/乡镇
+                function townFormat(info){
+                $('.addr-linkage select[name="town"]').hide().empty();
+                if (info['code'] % 1e4 && info['code'] < 7e6){	//是否为“区”且不是港澳台地区
+                var ajaxConfig = {
+                url: 'http://passer-by.com/data_location/town/' + info['code'] + '.json',
+                scriptCharset:'UTF-8',
+                dataType: "json",
+                timeout: 4000,
+                success: function(data) {
+                $('.addr-linkage select[name="town"]').show();
+                // $('#code').val(info['code']) // 填地区编码
+                for (i in data) {
+                $('.addr-linkage select[name="town"]').append(
+                '<option value="' + data[i] + '">' + data[i] + '</option>'
+                );
+                }
+                },
+                };
+                $.ajax(ajaxConfig).fail(function(p1,p2,p3){
+                ajaxConfig.url = 'js/data_location/town/' + info['code'] + '.json';
+                $.ajax(ajaxConfig)
+                });
+                }
+                };
+                $('.addr-linkage').citys({
+                // 如果某天这个仓库地址失效了dataUrl请使用本地 2017.10 的数据 'js/data_location/list.json'
+                dataUrl: 'http://passer-by.com/data_location/list.json',
+                spareUrl: 'js/data_location/list.json',
+                dataType: 'json',
+                valueType: 'name',
+                province: remote_ip_info['province'],
+                city: remote_ip_info['city'],
+                area: remote_ip_info['district'],
+                onChange: function(data) {
+                townFormat(data)
+                },
+                },function(api){
+                var info = api.getInfo();
+                townFormat(info);
+                });
+                });
+            p.fz18.cr 已保存的有效地址
+            .table-thead.addr-thead
+              .tdf1 收货人
+              .tdf2 所在地
+              .tdf3
+                .tdt-a_l 详细地址
+              // <div class="tdf1">邮编</div>
+              .tdf1 电话/手机
+              .tdf1 操作
+              .tdf1
+            .addr-list
+              .addr-item
+                .tdf1 喵喵喵
+                .tdf2.tdt-a_l 福建省 福州市 晋安区
+                .tdf3.tdt-a_l 浦下村74号
+                // <div class="tdf1">350111</div>
+                .tdf1 153****7649
+                .tdf1.order
+                  a(href='udai_address_edit.html') 修改
+                  a(href='') 删除
+                .tdf1
+                  a.default.active(href='') 默认地址
+              .addr-item
+                .tdf1 喵污喵⑤
+                .tdf2.tdt-a_l 福建省 福州市 仓山区 建新镇
+                .tdf3.tdt-a_l 建新中心小学
+                // <div class="tdf1">350104</div>
+                .tdf1 153****7649
+                .tdf1.order
+                  a(href='udai_address_edit.html') 修改
+                  a(href='') 删除
+                .tdf1
+                  a.default(href='') 设为默认
+              .addr-item
+                .tdf1 taroxd
+                .tdf2.tdt-a_l 福建省 福州市 鼓楼区 鼓东街道
+                .tdf3.tdt-a_l 世界金龙大厦20层B北 福州腾讯企点运营中心
+                // <div class="tdf1">350104</div>
+                .tdf1 153****7649
+                .tdf1.order
+                  a(href='udai_address_edit.html') 修改
+                  a(href='') 删除
+                .tdf1
+                  a.default(href='') 设为默认
+              .addr-item
+                .tdf1 VIPArcher
+                .tdf2.tdt-a_l 福建省 福州市 仓山区 建新镇
+                .tdf3.tdt-a_l 详细地址
+                // <div class="tdf1">350104</div>
+                .tdf1 153****7649
+                .tdf1.order
+                  a(href='udai_address_edit.html') 修改
+                  a(href='') 删除
+                .tdf1
+                  a.default(href='') 设为默认
+    // 右侧菜单
+    .right-nav
+      ul.r-with-gotop
+        li.r-toolbar-item
+          a.r-item-hd(href='udai_welcome.html')
+            i.iconfont.icon-user(data-badge='0')
+            .r-tip__box
+              span.r-tip-text 用户中心
+        li.r-toolbar-item
+          a.r-item-hd(href='udai_shopcart.html')
+            i.iconfont.icon-cart
+            .r-tip__box
+              span.r-tip-text 购物车
+        li.r-toolbar-item
+          a.r-item-hd(href='udai_collection.html')
+            i.iconfont.icon-aixin
+            .r-tip__box
+              span.r-tip-text 我的收藏
+        li.r-toolbar-item
+          a.r-item-hd(href='')
+            i.iconfont.icon-liaotian
+            .r-tip__box
+              span.r-tip-text 联系客服
+        li.r-toolbar-item
+          a.r-item-hd(href='issues.html')
+            i.iconfont.icon-liuyan
+            .r-tip__box
+              span.r-tip-text 留言反馈
+        li.r-toolbar-item.to-top
+          i.iconfont.icon-top
+          .r-tip__box
+            span.r-tip-text 返回顶部
+      script.
+        $(document).ready(function(){ $('.to-top').toTop({position:false}) });
+    // 底部信息
+    .footer
+      .footer-tags
+        .tags-box.inner
+          .tag-div
+            img(src='images/icons/footer_1.gif', alt='厂家直供')
+          .tag-div
+            img(src='images/icons/footer_2.gif', alt='一件代发')
+          .tag-div
+            img(src='images/icons/footer_3.gif', alt='美工活动支持')
+          .tag-div
+            img(src='images/icons/footer_4.gif', alt='信誉认证')
+      .footer-links.inner
+        dl
+          dt U袋网
+          a(href='temp_article/udai_article10.html')
+            dd 企业简介
+          a(href='temp_article/udai_article11.html')
+            dd 加入U袋
+          a(href='temp_article/udai_article12.html')
+            dd 隐私说明
+        dl
+          dt 服务中心
+          a(href='temp_article/udai_article1.html')
+            dd 售后服务
+          a(href='temp_article/udai_article2.html')
+            dd 配送服务
+          a(href='temp_article/udai_article3.html')
+            dd 用户协议
+          a(href='temp_article/udai_article4.html')
+            dd 常见问题
+        dl
+          dt 新手上路
+          a(href='temp_article/udai_article5.html')
+            dd 如何成为代理商
+          a(href='temp_article/udai_article6.html')
+            dd 代销商上架教程
+          a(href='temp_article/udai_article7.html')
+            dd 分销商常见问题
+          a(href='temp_article/udai_article8.html')
+            dd 付款账户
+      .copy-box.clearfix
+        ul.copy-links
+          a(href='agent_level.html')
+            li 网店代销
+          a(href='class_room.html')
+            li U袋学堂
+          a(href='udai_about.html')
+            li 联系我们
+          a(href='temp_article/udai_article10.html')
+            li 企业简介
+          a(href='temp_article/udai_article5.html')
+            li 新手上路
+        // 版权
+        p.copyright
+          | © 2005-2017 U袋网 版权所有，并保留所有权利
+          br
+          | 				ICP备案证书号：闽ICP备16015525号-2    福建省宁德市福鼎市南下村小区（锦昌阁）1栋1梯602室    Tel: 18650406668    E-mail: 18650406668@qq.com

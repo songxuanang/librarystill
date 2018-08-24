@@ -1,0 +1,228 @@
+doctype html
+html(lang='zh-cmn-Hans')
+  head
+    meta(charset='UTF-8')
+    link(rel='shortcut icon', href='favicon.ico')
+    link(rel='stylesheet', href='css/iconfont.css')
+    link(rel='stylesheet', href='css/global.css')
+    link(rel='stylesheet', href='css/bootstrap.min.css')
+    link(rel='stylesheet', href='css/bootstrap-theme.min.css')
+    link(rel='stylesheet', href='css/login.css')
+    script(src='js/jquery.1.12.4.min.js', charset='UTF-8')
+    script(src='js/bootstrap.min.js', charset='UTF-8')
+    script(src='js/jquery.form.js', charset='UTF-8')
+    script(src='js/global.js', charset='UTF-8')
+    script(src='js/login.js', charset='UTF-8')
+    title U袋网 - 登录 / 注册
+  body
+    .public-head-layout.container
+      a.logo(href='index.html')
+        img.cover(src='images/icons/logo.jpg', alt='U袋网')
+    div(style='background:url(images/login_bg.jpg) no-repeat center center; ')
+      .login-layout.container
+        .form-box.login
+          .tabs-nav
+            h2 欢迎登录U袋网平台
+          .tabs_container
+            form#login_form.tabs_form(action='', method='post')
+              .form-group
+                .input-group
+                  .input-group-addon
+                    span.glyphicon.glyphicon-phone(aria-hidden='true')
+                  input#login_phone.form-control.phone(name='phone', required='', placeholder='手机号', maxlength='11', autocomplete='off', type='text')
+              .form-group
+                .input-group
+                  .input-group-addon
+                    span.glyphicon.glyphicon-lock(aria-hidden='true')
+                  input#login_pwd.form-control.password(name='password', placeholder='请输入密码', autocomplete='off', type='password')
+                  .input-group-addon.pwd-toggle(title='显示密码')
+                    span.glyphicon.glyphicon-eye-open(aria-hidden='true')
+              .checkbox
+                label
+                  input#login_checkbox(checked='', type='checkbox')
+                  i
+                  |  30天内免登录
+                a#resetpwd.pull-right(href='javascript:;') 忘记密码？
+              // 错误信息
+              .form-group
+                #login_error.error_msg
+                  //
+                    错误信息 范例html
+                    <div class="alert alert-warning alert-dismissible fade in" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>密码错误</strong> 请重新输入密码
+                    </div>
+              button#login_submit.btn.btn-large.btn-primary.btn-lg.btn-block.submit(type='button') 登录
+              br
+              p.text-center
+                | 没有账号？
+                a#register(href='javascript:;') 免费注册
+            .tabs_div
+              .success-box
+                .success-msg
+                  i.success-icon
+                  p.success-text 登录成功
+              .option-box
+                .buts-title
+                  | 现在您可以
+                .buts-box
+                  a.btn.btn-block.btn-lg.btn-default(role='button', href='index.html') 继续访问商城
+                  a.btn.btn-block.btn-lg.btn-info(role='button', href='udai_welcome.html') 登录会员中心
+        .form-box.register
+          .tabs-nav
+            h2
+              | 欢迎注册
+              a#reglogin.pull-right.fz16(href='javascript:;') 返回登录
+          .tabs_container
+            form#register_form.tabs_form(action='index.html', method='post')
+              .form-group
+                .input-group
+                  .input-group-addon
+                    span.glyphicon.glyphicon-phone(aria-hidden='true')
+                  input#register_phone.form-control.phone(name='phone', required='', placeholder='手机号', maxlength='11', autocomplete='off', type='text')
+              .form-group
+                .input-group
+                  input#register_sms.form-control(name='smscode', placeholder='输入验证码', type='text')
+                  span.input-group-btn
+                    button.btn.btn-primary.getsms(type='button') 发送短信验证码
+              .form-group
+                .input-group
+                  .input-group-addon
+                    span.glyphicon.glyphicon-lock(aria-hidden='true')
+                  input#register_pwd.form-control.password(name='password', placeholder='请输入密码', autocomplete='off', type='password')
+                  .input-group-addon.pwd-toggle(title='显示密码')
+                    span.glyphicon.glyphicon-eye-open(aria-hidden='true')
+              .checkbox
+                label
+                  input#register_checkbox(checked='', type='checkbox')
+                  i
+                  |  同意
+                  a(href='temp_article/udai_article3.html') U袋网用户协议
+              // 错误信息
+              .form-group
+                #register_error.error_msg
+              button#register_submit.btn.btn-large.btn-primary.btn-lg.btn-block.submit(type='button') 注册
+            .tabs_div
+              .success-box
+                .success-msg
+                  i.success-icon
+                  p.success-text 注册成功
+              .option-box
+                .buts-title
+                  | 现在您可以
+                .buts-box
+                  a.btn.btn-block.btn-lg.btn-default(role='button', href='index.html') 继续访问商城
+                  a.btn.btn-block.btn-lg.btn-info(role='button', href='udai_welcome.html') 登录会员中心
+        .form-box.resetpwd
+          .tabs-nav.clearfix
+            h2
+              | 找回密码
+              a#pwdlogin.pull-right.fz16(href='javascript:;') 返回登录
+          .tabs_container
+            form#resetpwd_form.tabs_form(action='https://rpg.blue/member.php?mod=logging&action=login', method='post')
+              .form-group
+                .input-group
+                  .input-group-addon
+                    span.glyphicon.glyphicon-phone(aria-hidden='true')
+                  input#resetpwd_phone.form-control.phone(name='phone', required='', placeholder='手机号', maxlength='11', autocomplete='off', type='text')
+              .form-group
+                .input-group
+                  input#resetpwd_sms.form-control(name='sms', placeholder='输入验证码', type='text')
+                  span.input-group-btn
+                    button.btn.btn-primary.getsms(type='button') 发送短信验证码
+              .form-group
+                .input-group
+                  .input-group-addon
+                    span.glyphicon.glyphicon-lock(aria-hidden='true')
+                  input#resetpwd_pwd.form-control.password(name='password', placeholder='新的密码', autocomplete='off', type='password')
+                  .input-group-addon.pwd-toggle(title='显示密码')
+                    span.glyphicon.glyphicon-eye-open(aria-hidden='true')
+              // 错误信息
+              .form-group
+                #resetpwd_error.error_msg
+              button#resetpwd_submit.btn.btn-large.btn-primary.btn-lg.btn-block.submit(type='button') 重置密码
+            .tabs_div
+              .success-box
+                .success-msg
+                  i.success-icon
+                  p.success-text 密码重置成功
+              .option-box
+                .buts-title
+                  | 现在您可以
+                .buts-box
+                  a.btn.btn-block.btn-lg.btn-default(role='button', href='index.html') 继续访问商城
+                  a.btn.btn-block.btn-lg.btn-info(role='button', href='login.html') 返回登陆
+        script.
+          $(document).ready(function() {
+          // 判断直接进入哪个页面 例如 login.php?p=register
+          switch($.getUrlParam('p')) {
+          case 'register': $('.register').show(); break;
+          case 'resetpwd': $('.resetpwd').show(); break;
+          default: $('.login').show();
+          };
+          // 发送验证码事件
+          $('.getsms').click(function() {
+          var phone = $(this).parents('form').find('input.phone');
+          var error = $(this).parents('form').find('.error_msg');
+          switch(phone.validatemobile()) {
+          case 0:
+          // 短信验证码的php请求
+          error.html(msgtemp('验证码 <strong>已发送</strong>','alert-success'));
+          $(this).rewire(60);
+          break;
+          case 1: error.html(msgtemp('<strong>手机号码为空</strong> 请输入手机号码',    'alert-warning')); break;
+          case 2: error.html(msgtemp('<strong>手机号码错误</strong> 请输入11位数的号码','alert-warning')); break;
+          case 3: error.html(msgtemp('<strong>手机号码错误</strong> 请输入正确的号码',  'alert-warning')); break;
+          }
+          });
+          // 以下确定按钮仅供参考
+          $('.submit').click(function() {
+          var form = $(this).parents('form')
+          var phone = form.find('input.phone');
+          var pwd = form.find('input.password');
+          var error = form.find('.error_msg');
+          var success = form.siblings('.tabs_div');
+          var options = {
+          beforeSubmit: function () {
+          console.log('喵喵喵')
+          },
+          success: function (data) {
+          console.log(data)
+          }
+          }
+          // 验证手机号参考这个
+          switch(phone.validatemobile()) {
+          case 1: error.html(msgtemp('<strong>手机号码为空</strong> 请输入手机号码',    'alert-warning')); return; break;
+          case 2: error.html(msgtemp('<strong>手机号码错误</strong> 请输入11位数的号码','alert-warning')); return; break;
+          case 3: error.html(msgtemp('<strong>手机号码错误</strong> 请输入正确的号码',  'alert-warning')); return; break;
+          }
+          // 验证密码复杂度参考这个
+          switch(pwd.validatepwd()) {
+          case 1: error.html(msgtemp('<strong>密码不能为空</strong> 请输入密码',    'alert-warning')); return; break;
+          case 2: error.html(msgtemp('<strong>密码过短</strong> 请输入6位以上的密码','alert-warning')); return; break;
+          case 3: error.html(msgtemp('<strong>密码过于简单</strong><br>密码需为字母、数字或特殊字符组合',  'alert-warning')); return; break;
+          }
+          form.ajaxForm(options);
+          // 请求成功执行类似这样的事件
+          // form.fadeOut(150,function() {
+          // 	success.fadeIn(150);
+          // });
+          })
+          });
+    .footer-login.container.clearfix
+      ul.links
+        a(href='')
+          li 网店代销
+        a(href='')
+          li U袋学堂
+        a(href='')
+          li 联系我们
+        a(href='')
+          li 企业简介
+        a(href='')
+          li 新手上路
+      // 版权
+      p.copyright
+        | © 2005-2017 U袋网 版权所有，并保留所有权利
+        br
+        | 			ICP备案证书号：闽ICP备16015525号-2    福建省宁德市福鼎市南下村小区（锦昌阁）1栋1梯602室    Tel: 18650406668    E-mail: 18650406668@qq.com

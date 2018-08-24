@@ -1,0 +1,291 @@
+doctype html
+html(lang='zh-cmn-Hans')
+	head
+		meta(charset='UTF-8')
+		link(rel='shortcut icon', href='favicon.ico')
+		link(rel='stylesheet', href='css/iconfont.css')
+		link(rel='stylesheet', href='css/global.css')
+		link(rel='stylesheet', href='css/bootstrap.min.css')
+		link(rel='stylesheet', href='css/bootstrap-theme.min.css')
+		link(rel='stylesheet', href='css/swiper.min.css')
+		link(rel='stylesheet', href='css/styles.css')
+		script(src='js/jquery.1.12.4.min.js', charset='UTF-8')
+		script(src='js/bootstrap.min.js', charset='UTF-8')
+		script(src='js/swiper.min.js', charset='UTF-8')
+		script(src='js/global.js', charset='UTF-8')
+		script(src='js/jquery.DJMask.2.1.1.js', charset='UTF-8')
+		title U袋网
+	body
+		// 顶部tab
+		.tab-header
+			.inner
+				.pull-left
+					.pull-left
+						| 嗨，欢迎来到
+						span.cr U袋网
+					a(href='agent_level.html') 网店代销
+					a(href='temp_article/udai_article4.html') 帮助中心
+				.pull-right
+					a(href='login.html')
+						span.cr 登录
+					a(href='login.html?p=register') 注册
+					a(href='udai_welcome.html') 我的U袋
+					a(href='udai_order.html') 我的订单
+					a(href='udai_integral.html') 积分平台
+		// 顶部标题
+		.bgf5.clearfix
+			.top-user
+				.inner
+					a.logo(href='index.html')
+						img.cover(src='images/icons/logo.jpg', alt='U袋网')
+					.title 个人中心
+		.content.clearfix.bgf5
+			section.user-center.inner.clearfix
+				.pull-left.bgf
+					a.title(href='udai_welcome.html') U袋欢迎页
+					dl.user-center__nav
+						dt 帐户信息
+						a(href='udai_setting.html')
+							dd 个人资料
+						a(href='udai_treasurer.html')
+							dd 资金管理
+						a(href='udai_integral.html')
+							dd 积分平台
+						a(href='udai_address.html')
+							dd 收货地址
+						a(href='udai_coupon.html')
+							dd 我的优惠券
+						a(href='udai_paypwd_modify.html')
+							dd 修改支付密码
+						a(href='udai_pwd_modify.html')
+							dd 修改登录密码
+					dl.user-center__nav
+						dt 订单中心
+						a(href='udai_order.html')
+							dd.active 我的订单
+						a(href='udai_collection.html')
+							dd 我的收藏
+						a(href='udai_refund.html')
+							dd 退款/退货
+					dl.user-center__nav
+						dt 服务中心
+						a(href='udai_mail_query.html')
+							dd 物流查询
+						a(href='')
+							dd 数据自助下载
+						a(href='temp_article/udai_article1.html')
+							dd 售后服务
+						a(href='temp_article/udai_article2.html')
+							dd 配送服务
+						a(href='temp_article/udai_article3.html')
+							dd 用户协议
+						a(href='temp_article/udai_article4.html')
+							dd 常见问题
+					dl.user-center__nav
+						dt 新手上路
+						a(href='temp_article/udai_article5.html')
+							dd 如何成为代理商
+						a(href='temp_article/udai_article6.html')
+							dd 代销商上架教程
+						a(href='temp_article/udai_article7.html')
+							dd 分销商常见问题
+						a(href='temp_article/udai_article8.html')
+							dd 付款账户
+					dl.user-center__nav
+						dt U袋网
+						a(href='temp_article/udai_article10.html')
+							dd 企业简介
+						a(href='temp_article/udai_article11.html')
+							dd 加入U袋
+						a(href='temp_article/udai_article12.html')
+							dd 隐私说明
+				.pull-right
+					.user-content__box.clearfix.bgf
+						.title 订单中心-商品评价
+						.evaluate_box
+							.evaluate_info.posr.clearfix
+								.img
+									img.cover(src='images/temp/M-001.jpg', alt='')
+								.name.ep2 峥嵘 原创设计 传统日常汉服男绣花唐制圆领袍春秋非古装 峥嵘 原创设计 传统日常汉服男绣花唐制圆领袍春秋非古装
+								.param
+									.param-row
+										span.param-label 价格
+										b.cr.fz24 18.00
+										span.cr 元
+									.param-row
+										span.param-label 销量
+										span.c6.fz20 1688
+									.param-row
+										span.param-label 评价
+										span.c6.fz20 1688
+									.param-row
+										span.param-label 好评率
+										span.c6.fz20 95.87%
+								.info.c6
+									| 颜色分类：深棕色
+									br
+									| 								尺码：均码
+									br
+									| 								现在查看的是您所购商品的信息 于2017年08月11日 20:31下单购买了此商品
+						p.fz18.cr 商品评价
+						.modify_div
+							form.evaluate-form__box(action='')
+								span.help-block 快评论一番，让其他买家开开眼
+								table.table.table-bordered
+									tbody
+										tr
+											th(scope='row') 评价等级
+											td.user-form-group.fz0
+												label
+													input(name='opinion', value='G', checked='', type='radio')
+													i.iconfont.icon-radio
+													span 好评
+												label
+													input(name='opinion', value='N', type='radio')
+													i.iconfont.icon-radio
+													span 中评
+												label
+													input(name='opinion', value='B', type='radio')
+													i.iconfont.icon-radio
+													span 差评
+										tr
+											th(scope='row') 评价商品
+											td
+												textarea(rows='5', placeholder='请输入您对该商品的评价~')
+										tr(valign='middle')
+											th(scope='row') 晒图片
+											td
+												ul.uploader__files
+												.uploader__input
+												.uploader__size
+													span.cr 0
+													| /5
+								.checkbox
+									label
+										input(type='checkbox')
+										i
+										|  匿名评价
+									button.but.pull-right(type='submit') 提交评价
+								script.
+                                    $(document).ready(function(){
+                                        var tmpl = '<li class="uploader__file"><input name="i[]" accept="image/*" type="file"><i>&times;</i></li>',
+                                            $uploader_files = $('.uploader__files'),
+                                            $uploader_input = $('.uploader__input'),
+                                            $uploader_size = $('.uploader__size span');
+                                        $uploader_input.on('click',function() {
+                                            var size = $uploader_files.find('li').length;
+                                            if (size >= 5) {return DJMask.msg("最多上传5张图片！");}
+                                            var $input = $(tmpl);
+                                            $uploader_files.append($input);
+                                            $uploader_size.html(size + 1);
+                                            $input.on('click','i',function() {
+                                                $(this).parent().remove();
+                                                $uploader_size.html($uploader_files.find('li').length);
+                                            });
+                                            $input.on('change','input',function(e) {
+                                                var src, url = window.URL || window.webkitURL || window.mozURL, files = e.target.files, that = this;
+                                                for (var i = 0, len = files.length; i < len; ++i) {
+                                                    var file = files[i];
+                                                    if (url) {
+                                                        src = url.createObjectURL(file);
+                                                    } else {
+                                                        src = e.target.result;
+                                                    }
+                                                    $input.css({'background-image':'url('+src+')'}).addClass('active');
+                                                }
+                                            });
+                                            $input.find('input').click();
+                                        })
+                                    });
+		// 右侧菜单
+		.right-nav
+			ul.r-with-gotop
+				li.r-toolbar-item
+					a.r-item-hd(href='udai_welcome.html')
+						i.iconfont.icon-user(data-badge='0')
+						.r-tip__box
+							span.r-tip-text 用户中心
+				li.r-toolbar-item
+					a.r-item-hd(href='udai_shopcart.html')
+						i.iconfont.icon-cart
+						.r-tip__box
+							span.r-tip-text 购物车
+				li.r-toolbar-item
+					a.r-item-hd(href='udai_collection.html')
+						i.iconfont.icon-aixin
+						.r-tip__box
+							span.r-tip-text 我的收藏
+				li.r-toolbar-item
+					a.r-item-hd(href='')
+						i.iconfont.icon-liaotian
+						.r-tip__box
+							span.r-tip-text 联系客服
+				li.r-toolbar-item
+					a.r-item-hd(href='issues.html')
+						i.iconfont.icon-liuyan
+						.r-tip__box
+							span.r-tip-text 留言反馈
+				li.r-toolbar-item.to-top
+					i.iconfont.icon-top
+					.r-tip__box
+						span.r-tip-text 返回顶部
+			script.
+                $(document).ready(function(){ $('.to-top').toTop({position:false}) });
+		// 底部信息
+		.footer
+			.footer-tags
+				.tags-box.inner
+					.tag-div
+						img(src='images/icons/footer_1.gif', alt='厂家直供')
+					.tag-div
+						img(src='images/icons/footer_2.gif', alt='一件代发')
+					.tag-div
+						img(src='images/icons/footer_3.gif', alt='美工活动支持')
+					.tag-div
+						img(src='images/icons/footer_4.gif', alt='信誉认证')
+			.footer-links.inner
+				dl
+					dt U袋网
+					a(href='temp_article/udai_article10.html')
+						dd 企业简介
+					a(href='temp_article/udai_article11.html')
+						dd 加入U袋
+					a(href='temp_article/udai_article12.html')
+						dd 隐私说明
+				dl
+					dt 服务中心
+					a(href='temp_article/udai_article1.html')
+						dd 售后服务
+					a(href='temp_article/udai_article2.html')
+						dd 配送服务
+					a(href='temp_article/udai_article3.html')
+						dd 用户协议
+					a(href='temp_article/udai_article4.html')
+						dd 常见问题
+				dl
+					dt 新手上路
+					a(href='temp_article/udai_article5.html')
+						dd 如何成为代理商
+					a(href='temp_article/udai_article6.html')
+						dd 代销商上架教程
+					a(href='temp_article/udai_article7.html')
+						dd 分销商常见问题
+					a(href='temp_article/udai_article8.html')
+						dd 付款账户
+			.copy-box.clearfix
+				ul.copy-links
+					a(href='agent_level.html')
+						li 网店代销
+					a(href='class_room.html')
+						li U袋学堂
+					a(href='udai_about.html')
+						li 联系我们
+					a(href='temp_article/udai_article10.html')
+						li 企业简介
+					a(href='temp_article/udai_article5.html')
+						li 新手上路
+				// 版权
+				p.copyright
+					| © 2005-2017 U袋网 版权所有，并保留所有权利
+					br
+					| 				ICP备案证书号：闽ICP备16015525号-2    福建省宁德市福鼎市南下村小区（锦昌阁）1栋1梯602室    Tel: 18650406668    E-mail: 18650406668@qq.com
